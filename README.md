@@ -1,4 +1,5 @@
-# 🌿 Homemade Skincare 
+<<<<<<< HEAD
+#  Homemade Skincare 
 **University Final Graduation Project**  
 Stack: React + Vite + Express + Node.js + Firebase
 
@@ -43,6 +44,8 @@ skincare-app/
 
 
 
+
+---
 
 ## Setup Instructions
 
