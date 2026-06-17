@@ -23,4 +23,4 @@ app.use('/api/users',    require('./routes/users'))
 
 app.get('/api/health', (req, res) => res.json({ status: 'ok', timestamp: new Date() }))
 
-app.listen(PORT, () => console.log(`🌿 Homemade Skincare server running on port ${PORT}`))
+app.listen(PORT, () => console.log(` Homemade Skincare server running on port ${PORT}`))

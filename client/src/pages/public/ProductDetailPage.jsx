@@ -64,7 +64,7 @@ export default function ProductDetailPage() {
 
             {/* Informational notice */}
             <div className="handmade-notice">
-              🌿 This product is handmade in small batches. To receive a curated box of our full range, join the waiting list.
+               This product is handmade in small batches. To receive a curated box of our full range, join the waiting list.
             </div>
 
             {/* CTA to waitlist */}

@@ -20,7 +20,7 @@ export default function RegisterPage() {
     try {
       await registerUser(form)
       toast.success('Account created! Welcome to Homemade Skincare.')
-      navigate('/')
+      navigate('/login')
     } catch (err) {
       toast.error(err.message || 'Registration failed')
     } finally {

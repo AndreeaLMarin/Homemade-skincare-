@@ -1,34 +1,25 @@
 // src/services/authService.js
 import {
-  createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
-  updateProfile,
-  sendEmailVerification,
 } from 'firebase/auth'
-import { doc, setDoc, getDoc, serverTimestamp } from 'firebase/firestore'
+import { doc, getDoc } from 'firebase/firestore'
 import { auth, db } from './firebase'
 
 export const registerUser = async ({ name, email, password }) => {
-  const userCredential = await createUserWithEmailAndPassword(auth, email, password)
-  await updateProfile(userCredential.user, { displayName: name })
-  try {
-  await sendEmailVerification(userCredential.user)
-  console.log('Verification email sent successfully')
-} catch (error) {
-  console.error('Email verification error:', error.code, error.message)
-}
-
-  // Store user profile in Firestore
-  await setDoc(doc(db, 'users', userCredential.user.uid), {
-    uid: userCredential.user.uid,
-    name,
-    email,
-    role: 'customer', // Default role
-    createdAt: serverTimestamp(),
+  const response = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/register`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name, email, password }),
   })
 
-  return userCredential.user
+  const data = await response.json()
+
+  if (!response.ok) {
+    throw new Error(data.error || 'Registration failed')
+  }
+
+  return data
 }
 
 export const loginUser = async ({ email, password }) => {
