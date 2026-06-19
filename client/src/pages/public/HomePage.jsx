@@ -26,9 +26,8 @@ export default function HomePage() {
             Skincare without<br />the noise.
           </motion.h1>
           <motion.p className="lp-hero-body" variants={fadeUp} initial="hidden" animate="visible" custom={2}>
-            There's no shortage of products, influencers, or miracle serums.
-            What's harder to find is someone who tells you the truth —
-            what actually works, why, and what's just clever marketing.
+            No sponsored content. No affilliate link. No miracle claims.
+            Just honest reasearch, tested ingredients, and what actually works.
             <br /><br />
             This is that place. 
             <p><em>*This is not medical advice, but my own journey and experience.</em></p>
@@ -54,15 +53,15 @@ export default function HomePage() {
             <span className="lp-section-label">Why this exists</span>
             <h2>You've been there too.</h2>
             <p>
-              Standing in a pharmacy aisle, or scrolling product listings at midnight,
+              Scrolling product listings at midnight,
               trying to figure out what's worth buying — and what's just a pretty bottle
               with a big marketing budget behind it.
             </p>
             <p>
-              I built this because I couldn't find a source that was genuinely honest.
-              No brand deals. No affiliates. No course to sell you.
-              Just what I've tried, researched, and found to actually work —
-              including on my little one's skin.
+              This platform was created because there is a lack of honest source of information,
+              No brand deals, no affiliates, no course to sell. Just formulations that have been tested,
+              Researched and found to work. 
+
             </p>
             <Link to="/about" className="lp-text-link">
               Read the full story <ArrowRight size={14} />
